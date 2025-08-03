@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #4361ee;
+  --primary-light: #eef2ff;
+  --text-color: #2b2d42;
+  --light-gray: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-role {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.club-name {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.5rem;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.event-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.event-item p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+.action-button {
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background-color: var(--hover-color);
+}
+
+.quick-link {
+  display: block;
+  color: var(--text-color);
+  padding: 0.5rem 0;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.2s;
+}
+
+.quick-link:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}

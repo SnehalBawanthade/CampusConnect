@@ -1,0 +1,130 @@
+:root {
+  --purple: #a855f7;
+  --purple-dark: #9333ea;
+  --bg: #0d0d0d;
+  --card-bg: #111;
+  --text-light: #f3f4f6;
+  --gray: #6b7280;
+  --error-color: #ef4444;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+}
+
+.events-calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+.calendar-section {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+  min-width: 320px;
+  max-width: 400px;
+}
+
+.calendar-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.react-calendar {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  background-color: #1a1a1a;
+  color: var(--text-light);
+}
+
+.react-calendar__tile--active {
+  background-color: var(--purple-dark) !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile--now {
+  background: var(--purple);
+  color: white;
+}
+
+.react-calendar__navigation button {
+  color: var(--text-light);
+}
+
+.react-calendar button:enabled:hover {
+  background-color: rgba(168, 85, 247, 0.2);
+  color: white;
+}
+
+/* Right Section */
+.events-section {
+  flex: 1;
+  min-width: 340px;
+  max-width: 700px;
+}
+
+.events-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.error-message,
+.empty-message,
+.loading-message {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--gray);
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: var(--error-color);
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.event-card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
+}
+
+.event-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.event-detail {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin: 0.25rem 0;
+}
+
+.event-poster {
+  margin-top: 1rem;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.2);
+}
